@@ -1,0 +1,31 @@
+@import url('/css/app/stylePaletColor.css');
+.productsTable{
+    width: 80%;
+    margin: auto;
+    border: 1px solid var(--TABLE_BORDER_COLOR);
+    margin-top: 10px;
+}
+
+.filters{
+    display: flex;
+    gap: 20px;
+    width: 80%;
+    margin: auto;
+    margin-top: 15px;
+}
+
+.searchBar{
+    flex-basis: 230%;
+}
+
+.table{
+    margin-bottom: 0px;
+}
+
+.table-title > th{
+    text-align: center;
+}
+
+.cell-cant{
+    text-align: center;
+}

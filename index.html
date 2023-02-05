@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/app/styleTable.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+</head>
+
+<body>
+
+   
+
+    <div class="filters">
+
+        <div class="input-group mb-3 searchBar">
+            <input type="text" class="form-control" placeholder="Buscar Producto..." aria-label="Buscar Producto" aria-describedby="basic-addon2" id="filter-input">
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" type="button">Buscar</button>
+            </div>
+          </div>
+
+          <div class="input-group mb-3">
+            <select class="form-select" id="filter-category">
+              <option selected>Categoria...</option>
+              <option value="1">Productos</option>
+              <option value="2">Bandejas</option>
+              <option value="3">Bolsas</option>
+              <option value="4">Vasos</option>
+            </select>
+          </div>
+         
+    </div>
+
+    <div class="productsTable">
+        <table class="table table-striped" id="principalTable">
+            <thead class="tableHeader">
+                <tr class="table-title">
+                    <th colspan="3">Lista de Productos</th>
+                </tr>
+            </thead>
+            <tbody class="tableBody">
+            </tbody>
+        </table>
+    </div>
+
+    <div class="productsTable">
+        <table class="table table-striped" id="cartTable">
+            <thead class="tableHeader">
+                <tr class="table-title">
+                    <th colspan="4">Lista de Productos</th>
+                </tr>
+            </thead>
+            <tbody class="tableBody">
+            </tbody>
+        </table>
+    </div>
+
+    <!--jQuery related-->
+    <script src="/js/jQuery.js"></script>
+    <script src="/js/app/jQueryGentiLib.js"></script>
+    
+    <!-- Async-->
+    <script src="/js/app/main.js"></script>
+    <script src="/js/app/scriptCreateTableRow.js"></script>
+    
+    <!--Events-->
+    <script src="/js/app/scriptButtons.js"></script>
+    
+    <!--Bootstrap related-->
+    <script src="/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
