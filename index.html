@@ -19,17 +19,17 @@
         <div class="input-group mb-3 searchBar">
             <input type="text" class="form-control" placeholder="Buscar Producto..." aria-label="Buscar Producto" aria-describedby="basic-addon2" id="filter-input">
             <div class="input-group-append">
-              <button class="btn btn-outline-secondary" type="button">Buscar</button>
+              <button class="btn btn-outline-secondary" type="button" id="filter-input-btn">Buscar</button>
             </div>
           </div>
 
           <div class="input-group mb-3">
             <select class="form-select" id="filter-category">
-              <option selected>Categoria...</option>
-              <option value="1">Productos</option>
-              <option value="2">Bandejas</option>
-              <option value="3">Bolsas</option>
-              <option value="4">Vasos</option>
+              <option selected data-filter="all">Categoria...</option>
+              <option value="1" data-filter="1">Bandejas</option>
+              <option value="2" data-filter="2">Bolsas</option>
+              <option value="3" data-filter="3">Productos</option>
+              <option value="4" data-filter="4">Vasos</option>
             </select>
           </div>
          
@@ -62,6 +62,8 @@
     <!--jQuery related-->
     <script src="js/jQuery.js"></script>
     <script src="js/app/jQueryGentiLib.js"></script>
+
+    <script src="js/app/scriptFilter.js"></script>
     
     <!-- Async-->
     <script src="js/app/main.js"></script>

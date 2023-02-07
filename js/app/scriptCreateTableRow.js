@@ -15,7 +15,7 @@ function createTableHeader(table) {
     })
 
     if (table.attr('id') == "cartTable") {
-        let item = createElement('th', 'cell-cant', null, 'Cantidad');
+        let item = createElement('th', 'cell-cant', null, 'Cant');
         addAtribbute(item, 'scope', 'col');
         item.appendTo(header);
     }
@@ -33,7 +33,8 @@ function createTableContentRow() {
         tableContent[element].forEach(element => {
 
             //Create new row
-            let row = createElement('tr');
+            let row = createElement('tr', 'mainTableElement');
+            row.data('category', categoryID.get(element.category))
 
             //Set the product name to the new row
             let product = createElement('th', null, null, element.product);

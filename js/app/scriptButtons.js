@@ -9,3 +9,8 @@ $('.productsTable').on('click', '.btn-add', function () {
     createTableCartRow(cartElement);
 
 })
+
+
+$('.productsTable').on('click', '.btn-remove', function(){
+    $(this).closest('tr').remove();
+})

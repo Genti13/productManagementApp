@@ -8,6 +8,13 @@ const tableContent = {
     'cat-bandeja': []
 };
 
+const categoryID = new Map([
+    ['Bandeja', 1],
+    ['Bolsa', 2],
+    ['Producto', 3],
+    ['Vaso', 4]
+])
+
 main();
 
 async function main() {
@@ -43,8 +50,6 @@ async function fetchData() {
     elements.forEach(element_1 => {
         let column = element_1.split('</td>');
         column.pop();
-
-        console.log(column);
 
         let product = column[0].substring(column[0].lastIndexOf('>') + 1);
         let value = column[1].substring(column[1].lastIndexOf('>') + 1);

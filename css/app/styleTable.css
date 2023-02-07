@@ -1,12 +1,13 @@
-@import url('/css/app/stylePaletColor.css');
-.productsTable{
+@import url('stylePaletColor.css');
+
+.productsTable {
     width: 80%;
     margin: auto;
     border: 1px solid var(--TABLE_BORDER_COLOR);
     margin-top: 10px;
 }
 
-.filters{
+.filters {
     display: flex;
     gap: 20px;
     width: 80%;
@@ -14,18 +15,59 @@
     margin-top: 15px;
 }
 
-.searchBar{
+.searchBar {
     flex-basis: 230%;
 }
 
-.table{
+.table {
     margin-bottom: 0px;
 }
 
-.table-title > th{
+.table-title>th {
     text-align: center;
 }
 
-.cell-cant{
+.cell-cant {
+    text-align: center;
+}
+
+#principalTable>.tableBody th:last-child {
+    width: 80px;
+    vertical-align: middle;
+}
+
+#principalTable>.tableBody th:first-child {
+    vertical-align: middle;
+}
+
+#principalTable>.tableBody th:nth-child(2) {
+    width: 80px;
+    text-align: right;
+    vertical-align: middle;
+}
+
+#cartTable>.tableBody th:first-child{
+    max-width: 80px;
+    vertical-align: middle;
+}
+
+#cartTable>.tableBody th:last-child{
+    width: 60px;
+    vertical-align: middle;
+}
+
+#cartTable>.tableBody th:nth-child(3) {
+    width: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#cartTable>.tableBody th:nth-child(2) {
+    width: 10px;
+    text-align: right;
+    vertical-align: middle;
+}
+
+.tableHeader tr:last-child th{
     text-align: center;
 }
