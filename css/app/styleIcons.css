@@ -1,0 +1,22 @@
+#hamburger {
+    width: 2rem;
+    height: 2rem;
+    z-index: 4;
+    margin-left: 0.3rem;
+    margin-top: 0.3rem;
+    cursor: pointer;
+    position: fixed;
+}
+
+.cross{
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    cursor: pointer;
+}
+
+.titl-cross{
+    position: relative;
+}

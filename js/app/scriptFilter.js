@@ -3,7 +3,14 @@ $('#filter-category').on('change', function () {
     let filterId = $(this).val();
     let elements = $('.mainTableElement');
 
+    console.log(filterId);
+
     elements.each(function () {
+        if (filterId == 0) {
+            $(this).css('display', 'table-row');
+            return;
+        }
+
         if ($(this).data('category') != filterId) {
             $(this).css('display', 'none');
         } else {

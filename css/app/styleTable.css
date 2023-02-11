@@ -46,12 +46,12 @@
     vertical-align: middle;
 }
 
-#cartTable>.tableBody th:first-child{
+#cartTable>.tableBody th:first-child {
     max-width: 80px;
     vertical-align: middle;
 }
 
-#cartTable>.tableBody th:last-child{
+#cartTable>.tableBody th:last-child {
     width: 60px;
     vertical-align: middle;
 }
@@ -68,6 +68,50 @@
     vertical-align: middle;
 }
 
-.tableHeader tr:last-child th{
+.tableHeader tr:last-child th {
     text-align: center;
+}
+
+#cart {
+    display: none;
+}
+
+#total {
+    text-align: right;
+}
+
+#addProducts,
+#cart {
+    padding-top: 15px;
+}
+
+#menu-btns {
+    position: fixed;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background: #fff;
+    border-bottom: solid 1px #000;
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 4%;
+    padding-bottom: 4%;
+}
+
+#menu {
+    display: none;
+    justify-content: center;
+}
+
+.popUp-container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #000;
+}
+
+#downloadAsPDF{
+    font-size: 14px !important;
 }

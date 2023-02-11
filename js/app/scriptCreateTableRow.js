@@ -78,7 +78,7 @@ function createTableCartRow(content) {
     addAtribbute(value, 'scope', 'col');
     value.appendTo(row);
 
-    let cant = createElement('th', 'cell-cant', null, 1);
+    let cant = createElement('th', 'cell-cant', null, content.cant);
     addAtribbute(cant, 'scope', 'col');
     cant.appendTo(row);
 
@@ -92,9 +92,6 @@ function createTableCartRow(content) {
     btn.appendTo(button);
     button.appendTo(row);
 
-
-
     row.appendTo(body)
-    console.log(content);
 
 }

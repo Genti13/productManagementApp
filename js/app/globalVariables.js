@@ -1,0 +1,1 @@
+const localStorageMap = new Map();

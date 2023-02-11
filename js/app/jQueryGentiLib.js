@@ -11,6 +11,14 @@ function addAtribbute(element, attrName, attrVal) {
     element.attr(attrName, attrVal);
 }
 
-function addDataAttribute(element, name, dataVal){
+function addDataAttribute(element, name, dataVal) {
     element.attr('data-' + name, dataVal);
+}
+
+function mapToStr(map) {
+    return JSON.stringify(Object.fromEntries(map));
+}
+
+function mapToJS(map) {
+    return JSON.parse(JSON.stringify(Object.fromEntries(map)));
 }
