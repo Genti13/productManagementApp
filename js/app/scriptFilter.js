@@ -20,16 +20,12 @@ $('#filter-category').on('change', function () {
 })
 
 $('#filter-input-btn').on('click', function () {
-    let filter = $('#filter-input').val()
+    let filter = $('#filter-input').val().toLowerCase();
     let elements = $('.mainTableElement');
 
-    elements.each(function () {
-        if (!$(this).first().text().includes(filter)) {
-            $(this).css('display', 'none');
-        } else {
-            $(this).css('display', 'table-row');
-        }
-    })
+    filterElements(elements, filter);
+
+
 })
 
 $('#filter-input').keypress(function (event) {
@@ -37,14 +33,18 @@ $('#filter-input').keypress(function (event) {
 
     if (keycode == '13') {
         let elements = $('.mainTableElement');
-        let filter = $('#filter-input').val();
+        let filter = $('#filter-input').val().toLowerCase();
 
-        elements.each(function () {
-            if (!$(this).first().text().includes(filter)) {
-                $(this).css('display', 'none');
-            } else {
-                $(this).css('display', 'table-row');
-            }
-        })
+        filterElements(elements, filter);
     }
 });
+
+function filterElements(elements, filter) {
+    elements.each(function () {
+        if (!$(this).first().text().toLowerCase().includes(filter)) {
+            $(this).css('display', 'none');
+        } else {
+            $(this).css('display', 'table-row');
+        }
+    })
+}
