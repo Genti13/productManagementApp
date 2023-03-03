@@ -15,8 +15,10 @@ const categoryID = new Map([
     ['Vaso', 4]
 ])
 
-let theme = JSON.parse(localStorage.facuApp).theme;
-setTheme();
+if(localStorage.facuApp){
+    let theme = JSON.parse(localStorage.facuApp).theme;
+    setTheme();
+}
 
 main();
 
