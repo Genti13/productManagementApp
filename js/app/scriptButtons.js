@@ -66,6 +66,10 @@ $('.productsTable').on('click', '.btn-remove', function () {
     $(this).closest('tr').remove();
 
     localStorageMap.delete($(this).closest('tr').find('th:first').text());
+
+    $('#total').html(calculateTotal())
+
+
 })
 
 $('#hamburger').on('click', function () {
@@ -84,6 +88,20 @@ $('#btn-cart').on('click', function () {
     $('#menu').toggle();
 })
 
-$('.cross').on('click',function(){
-    $('.popUp').toggle();
+$('#btn-theme').on('click', function () {
+
+    if (theme == 'light') {
+        setDarkTheme();
+    }
+    else {
+        setLightTheme();
+    }
+
+    let properties = {
+        theme: theme
+    }
+
+    localStorage.setItem('facuApp', JSON.stringify(properties))
+
 })
+

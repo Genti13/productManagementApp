@@ -1,5 +1,14 @@
 @import url('stylePaletColor.css');
 
+body{
+    min-height: 100vh;
+}
+
+.main{
+    height: 100%;
+    
+}
+
 .productsTable {
     width: 80%;
     margin: auto;
@@ -74,6 +83,7 @@
 
 #cart {
     display: none;
+    min-height: 100vh;
 }
 
 #total {
@@ -114,4 +124,17 @@
 
 #downloadAsPDF{
     font-size: 14px !important;
+}
+
+#cartTable{
+    margin-bottom: 0px;
+}
+
+.placeHolderDark::placeholder{
+    color: white !important
+}
+
+.dark-modal{
+    background-color: #212529 !important;
+    color: white !important;
 }

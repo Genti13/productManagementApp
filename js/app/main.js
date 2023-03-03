@@ -15,6 +15,9 @@ const categoryID = new Map([
     ['Vaso', 4]
 ])
 
+let theme = JSON.parse(localStorage.facuApp).theme;
+setTheme();
+
 main();
 
 async function main() {
@@ -74,3 +77,76 @@ async function fetchData() {
 }
 
 
+function setTheme() {
+
+    if (theme == 'dark') {
+        setDarkTheme()
+    }
+    else{
+        setLightTheme()
+    }
+
+}
+
+$('.cross').on('click', function () {
+    $('.popUp').toggle();
+})
+
+function setDarkTheme() {
+    let tables = $('.table-striped');
+    let darkBG = '#212529';
+    let modal = $('.modal-dialog').find('.modal-content');
+
+    theme = 'dark'
+
+    $('body').css('background-color', darkBG);
+    $('#menu-btns').css('background-color', darkBG);
+
+    $('#filter-category').css('background-color', darkBG);
+    $('#filter-category').css('color', 'white');
+
+    $('#filter-input').css('background-color', darkBG);
+    $('#filter-input').css('color', 'white');
+    $('#filter-input').addClass('placeHolderDark');
+
+    $('#filter-input-btn').css('color', 'white');
+    $('#filter-input-btn').css('border', 'var(--bs-btn-border-width) solid white');
+    $('#filter-input-btn').css('background', '#17191b');
+
+    modal.addClass('dark-modal')
+
+    $('#hamburger').css('fill', 'white');
+
+    tables.each(function () {
+        $(this).addClass('table-dark');
+    })
+}
+
+function setLightTheme() {
+    let tables = $('.table-striped');
+    let modal = $('.modal-dialog').find('.modal-content');
+
+    theme = 'light'
+
+    $('body').css('background-color', 'white');
+    $('#menu-btns').css('background-color', 'white');
+
+    $('#filter-category').css('background-color', 'white');
+    $('#filter-category').css('color', 'black');
+
+    $('#filter-input').css('background-color', 'white');
+    $('#filter-input').css('color', 'black');
+    $('#filter-input').removeClass('placeHolderDark');
+
+    $('#filter-input-btn').css('color', 'black');
+    $('#filter-input-btn').css('border', 'var(--bs-btn-border-width) solid black');
+    $('#filter-input-btn').css('background', 'white')
+
+    modal.removeClass('dark-modal')
+
+    $('#hamburger').css('fill', 'black');
+
+    tables.each(function () {
+        $(this).removeClass('table-dark');
+    })
+}
